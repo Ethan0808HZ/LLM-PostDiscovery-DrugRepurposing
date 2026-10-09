@@ -37,20 +37,17 @@ clinical trials
 
 Google Patents (patents.google.com)
 
-patent prior-art / novelty screening ONLY
+patent prior-art / novelty screening ONLY\
 Justia Patents may only be used as a backup search/listing source.
 Do not use Justia alone for a final patent-based decision.
 Do not use PubChem patent pages, Espacenet, WIPO PATENTSCOPE,
-or USPTO search because they are unavailable in the current environment.
-Do not use general WebSearch results, vendor pages, Wikipedia,
-blogs, or unsupported model knowledge as scientific evidence.
-If evidence cannot be verified, report UNRESOLVED.
+or USPTO search because they are unavailable in the current environment. Do not use general WebSearch results, vendor pages, Wikipedia, blogs, or unsupported model knowledge as scientific evidence. If evidence cannot be verified, report UNRESOLVED.
 
 ---
 ### STEP 1 — IDENTITY
 ---
-Resolve the exact candidate identity first.
-Record:
+Resolve the exact candidate identity first.\
+Record:\
 candidate
 
 canonical name
@@ -59,7 +56,7 @@ synonyms
 
 discovery branch
 
-target/action if supported
+target/action if supported\
 Merge duplicate exact compounds but preserve all discovery branches.
 All classifications must concern the EXACT compound,
 not merely its target, pathway, drug class, or related molecule.
@@ -101,22 +98,19 @@ target/pathway has a clear PD biological connection.
 No meaningful exact Drug-PD connection found and the proposed
 Drug-PD hypothesis arises mainly by combining distributed evidence.
 -> KEEP
-Assign Prior PD Exposure:
-P0 = approved / established PD use
-P1 = human PD study or clinical trial
-P2 = animal / cell / PD-associated experimental model
-P3 = explicit proposal / patent / computational prediction
-P4 = no meaningful exact Drug-PD link found
-IMPORTANT:
-If N0, N1, or N2 is confirmed, stop expensive screening for that
-candidate and mark REJECT.
+Assign Prior PD Exposure:\
+P0 = approved / established PD use\
+P1 = human PD study or clinical trial\
+P2 = animal / cell / PD-associated experimental model\
+P3 = explicit proposal / patent / computational prediction\
+P4 = no meaningful exact Drug-PD link found\
+IMPORTANT: If N0, N1, or N2 is confirmed, stop expensive screening for that candidate and mark REJECT.
 #### Patent rule:
 If Google Patents confirms that the exact compound, verified synonym,
-or clearly corresponding prodrug/form is explicitly proposed or claimed
-for Parkinson's disease therapy:
-N = N2
-P = P3
-Decision = REJECT
+or clearly corresponding prodrug/form is explicitly proposed or claimed for Parkinson's disease therapy:\
+N = N2\
+P = P3\
+Decision = REJECT\
 Target-class or related-compound patents are NOT sufficient.
 
 ---
@@ -124,45 +118,45 @@ Target-class or related-compound patents are NOT sufficient.
 ---
 Run this step only for candidates surviving N/P screening.
 #### M — Mechanistic Evidence
-M1 = weak / largely speculative mechanistic evidence
-M2 = moderate mechanistic component evidence
-M3 = strong mechanistic component evidence
-Evaluate evidence supporting:
-Exact Drug
-→ target / process / phenotype
-→ PD-relevant biology
+M1 = weak / largely speculative mechanistic evidence\
+M2 = moderate mechanistic component evidence\
+M3 = strong mechanistic component evidence\
+Evaluate evidence supporting:\
+Exact Drug\
+→ target / process / phenotype\
+→ PD-relevant biology\
 Do not silently attribute target-class evidence to the exact compound.
 #### F — Exact-Compound Functional Evidence
-#### F0:
-Only binding, target annotation, or mechanism-of-action evidence.
-#### F1:
+F0:\
+Only binding, target annotation, or mechanism-of-action evidence.\
+F1:\
 Exact compound experimentally modulates the relevant target/pathway,
-but no relevant downstream functional phenotype is demonstrated.
-#### F2:
+but no relevant downstream functional phenotype is demonstrated.\
+F2:\
 Exact compound produces a relevant functional phenotype in cell or
-animal experiments outside PD.
-Examples:
+animal experiments outside PD.\
+Examples:\
 mitochondrial function, lysosomal function, autophagic flux,
 inflammatory state, proteostasis, neuronal survival,
-oxidative stress, synaptic phenotype, cellular trafficking.
-#### F3:
+oxidative stress, synaptic phenotype, cellular trafficking.\
+F3:\
 Exact compound demonstrates the relevant functional phenotype in a
 strong translational or human context while still lacking a direct PD
-therapeutic link.
+therapeutic link.\
 #### DIRECTION
-consistent:
+Consistent:
 drug action is compatible with correcting the supported PD-relevant biology.
 inconsistent:
 drug action opposes the better-supported biological direction.
-unclear:
+Unclear:
 evidence is insufficient or contradictory.
 Do not infer therapeutic direction from a generic association.
 #### CNS
-Classify:
-feasible
-uncertain
-fatal_liability
-Absence of BBB/CNS evidence alone = uncertain.
+Classify:\
+feasible\
+uncertain\
+fatal_liability\
+Absence of BBB/CNS evidence alone = uncertain.\
 Use fatal_liability only when evidence gives a strong reason that
 the proposed CNS mechanism is not realistically achievable.
 ### EVIDENCE RULE
@@ -174,53 +168,53 @@ PMID
 
 NCT ID
 
-Google Patent number
-Use these evidence labels where appropriate:
-OBSERVED_KG
-OBSERVED_LITERATURE
-SUPPORTED_CONTEXT
-AGENT_INFERENCE
-CONTRADICTED
-UNRESOLVED
+Google Patent number\
+Use these evidence labels where appropriate:\
+OBSERVED_KG\
+OBSERVED_LITERATURE\
+SUPPORTED_CONTEXT\
+AGENT_INFERENCE\
+CONTRADICTED\
+UNRESOLVED\
 Never present AGENT_INFERENCE as an observed fact.
 
 ---
 ### PRIORITIZATION
 ---
-Preferred Round 3 profile:
-P4
-AND M2 or M3
-AND F2 or F3
-AND Direction = consistent
-AND CNS != fatal_liability
+Preferred Round 3 profile:\
+P4\
+AND M2 or M3\
+AND F2 or F3\
+AND Direction = consistent\
+AND CNS != fatal_liability\
 AND no direct PD clinical, animal, cellular,
-or PD-associated experimental exposure.
-F0 candidates should normally not proceed.
-F1 candidates may remain HOLD / lower priority.
+or PD-associated experimental exposure.\
+F0 candidates should normally not proceed.\
+F1 candidates may remain HOLD / lower priority.\
 Do not keep weak candidates merely to reach a target number.
 
 ---
 ### OUTPUT
 ---
-Return ONE complete screening table containing:
-Candidate
-Canonical identity
-Discovery branch
-Target/action
-Exact prior PD evidence
-Evidence source
-N
-P
-M
-F
-Direction
-CNS
-Exact-compound functional phenotype
-PD relevance of phenotype
-Contradictory evidence
-KEEP / REJECT / HOLD
-Reason
-Most important remaining inference gap
+Return ONE complete screening table containing:\
+Candidate\
+Canonical identity\
+Discovery branch\
+Target/action\
+Exact prior PD evidence\
+Evidence source\
+N\
+P\
+M\
+F\
+Direction\
+CNS\
+Exact-compound functional phenotype\
+PD relevance of phenotype\
+Contradictory evidence\
+KEEP / REJECT / HOLD\
+Reason\
+Most important remaining inference gap\
 Then report:
 
 total screened
@@ -231,15 +225,20 @@ HOLD count
 
 KEEP count
 
-ranked shortlist of strongest survivors
-Do NOT start Deep Validation.
-STOP after returning the screening table for review.
+ranked shortlist of strongest survivors\
+Do NOT start Deep Validation.\
+STOP after returning the screening table for review.\
 ## Prompt 2: N/P Critic Agent
 Do NOT rerun the full screening. Do NOT change existing M / F / Direction / CNS classifications. Do NOT start Deep
 Validation yet. Only re-check the N/P novelty status of the 8 current KEEP candidates: - Oltipraz - Ru265 - Neflamapimod
-(VX-745) - Emricasan (IDN-6556) - Bis-T-23 - ANX005 - PMX205 - Ruxolitinib For each exact compound: 1. Re-check prior
-PD exposure using: - PubMed - ClinicalTrials.gov - Google Patents 2. Google Patents is the primary patent-content source.
-Justia may only be used to locate a patent number and is not sufficient alone for an N2/P3 decision. 3. Apply the existing
+(VX-745) - Emricasan (IDN-6556) - Bis-T-23 - ANX005 - PMX205 - Ruxolitinib 
+
+For each exact compound:\
+1. Re-check prior
+PD exposure using: - PubMed - ClinicalTrials.gov - Google Patents\
+2. Google Patents is the primary patent-content source.
+Justia may only be used to locate a patent number and is not sufficient alone for an N2/P3 decision.\
+3. Apply the existing
 novelty rules: - N0/P0 = established PD use → REJECT - N1/P1 or P2 = direct human/clinical or experimental PD exposure
 → REJECT - N2/P3 = explicit PD therapeutic proposal/patent/prediction → REJECT - N3/N4 with P4 = no meaningful
 exact Drug-PD prior exposure found → retain 4. If Google Patents or ClinicalTrials.gov cannot be successfully checked, do

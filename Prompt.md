@@ -1,4 +1,4 @@
-# Parkinson’s Disease Drug Repurposing: Prompts
+# Prompts
 
 ## Prompt 1 Initial Multimodal Screening
 Continue Parkinson's Disease Drug Repurposing
@@ -45,6 +45,7 @@ or USPTO search because they are unavailable in the current environment.
 Do not use general WebSearch results, vendor pages, Wikipedia,
 blogs, or unsupported model knowledge as scientific evidence.
 If evidence cannot be verified, report UNRESOLVED.
+
 ---
 ### STEP 1 — IDENTITY
 ---
@@ -62,6 +63,7 @@ target/action if supported
 Merge duplicate exact compounds but preserve all discovery branches.
 All classifications must concern the EXACT compound,
 not merely its target, pathway, drug class, or related molecule.
+
 ---
 ### STEP 2 — NOVELTY / PRIOR PD EXPOSURE
 ---
@@ -116,6 +118,7 @@ N = N2
 P = P3
 Decision = REJECT
 Target-class or related-compound patents are NOT sufficient.
+
 ---
 ### STEP 3 — M / F / DIRECTION / CNS
 ---
@@ -179,6 +182,7 @@ AGENT_INFERENCE
 CONTRADICTED
 UNRESOLVED
 Never present AGENT_INFERENCE as an observed fact.
+
 ---
 ### PRIORITIZATION
 ---
@@ -193,6 +197,7 @@ or PD-associated experimental exposure.
 F0 candidates should normally not proceed.
 F1 candidates may remain HOLD / lower priority.
 Do not keep weak candidates merely to reach a target number.
+
 ---
 ### OUTPUT
 ---
@@ -269,6 +274,7 @@ ANX005
 Bis-T-23
 Do not investigate any other candidates.
 Complete all candidates without waiting for further user confirmation.
+
 ---
 ### DATA SOURCES
 ---
@@ -289,6 +295,7 @@ UNRESOLVED
 Do not substitute another source.
 A source-access failure for one candidate or one relationship must not stop the overall analysis.
 Continue with the avaliable evidence and continue to the next candidate.
+
 ---
 ### TASK 1 — MECHANISM HYPOTHESIS PROPOSING
 ---
@@ -306,6 +313,7 @@ and where inference is necessary.
 Prefer mechanisms that are biologically coherent, well supported, and require fewer unsupported assumptions.
 Do not attempt to preserve the previous screening mechanism if the evidence supports a different mechanism.
 If the strongest evidence requires revising the original mechanism, explicitly report the revision.
+
 ---
 ### EDGE-LEVEL EVIDENCE REQUIREMENT
 ---
@@ -348,6 +356,7 @@ Never silently attribute target-class, pathway-class, phenotype-level, or contex
 A failure to find evidence is not itself contradictory evidence.
 Do not label a zero-result search as CONTRADICTED.
 Use UNRESOLVED or explicitly state that no direct evidence was identified using the approved searches.
+
 ---
 ### TASK 2 — INDEPENDENT VALIDATION
 ---
@@ -360,6 +369,7 @@ Do not constrain the Critic to a predefined checklist if other important problem
 Every criticism must also include its evidence source.
 If the criticism is an inference rather than a directly observed fact, clearly state the reasoning.
 The Critic must not try to rescue a hypothesis when material contradictory evidence is found.
+
 ---
 ### FINAL OUTPUT
 ---
@@ -382,6 +392,7 @@ HYPOTHESIS_UNDERMINED
 Brief justification for the verdict
 Do not make therapeutic efficacy claims.
 The goal is to produce a testable, evidence-grounded mechanistic hypothesis.
+
 ---
 ### EXECUTION RULE
 ---

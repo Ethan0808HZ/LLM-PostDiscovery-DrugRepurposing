@@ -132,7 +132,8 @@ Exact Drug
 → target / process / phenotype
 → PD-relevant biology
 Do not silently attribute target-class evidence to the exact compound.
-#### F — Exact-Compound Functional Evidence#### F0:
+#### F — Exact-Compound Functional Evidence
+#### F0:
 Only binding, target annotation, or mechanism-of-action evidence.
 #### F1:
 Exact compound experimentally modulates the relevant target/pathway,
@@ -213,7 +214,7 @@ P
 M
 F
 Direction
-#### CNS
+CNS
 Exact-compound functional phenotype
 PD relevance of phenotype
 Contradictory evidence
